@@ -1,4 +1,4 @@
-<h3 align="center">📘✨ **JavaScript Learning Repository (Based on David Flanagan's Book)** ✨📘</h3>
+<h3 align="center">📘✨ JavaScript Learning Repository (Based on David Flanagan's Book) ✨📘</h3>
 
 <p align="center">Created by Francis K with ❤️</p> 
 
