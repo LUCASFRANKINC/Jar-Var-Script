@@ -1,7 +1,11 @@
 <h3 align="center">📘✨ **JavaScript Learning Repository (Based on David Flanagan's Book)** ✨📘</h3>
 
-<p align="center">Created by Francis K with ❤️</p>
-<p align="center"><img src="https://github.com/LUCASFRANKINC/LUCASFRANKINC/blob/main/lukade_Frank%20Dex%20Devs_Landscape_121.png" /></p> 
+<p align="center">Created by Francis K with ❤️</p> 
+
+[![Github](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/lukademinnosa)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/dev_luke_254)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/francis-karuri-b30334177/)
+<p align="center"><img src="https://github.com/LUCASFRANKINC/LUCASFRANKINC/blob/main/lukade_Frank%20Dex%20Devs_Landscape_121.png" /> </p>
 
 Welcome to the JavaScript Learning Repository! 🎉 This repository is a comprehensive resource designed to facilitate your journey in mastering JavaScript, inspired by the acclaimed book "JavaScript: The Definitive Guide" by David Flanagan. 🚀
 
