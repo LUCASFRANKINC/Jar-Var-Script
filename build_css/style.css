@@ -1,0 +1,25 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  -webkit-user-select: none;
+  user-select: none;
+  background: #f1f1f1;
+}
+
+main {
+  display: grid;
+  place-items: center center;
+  height: 100vh;
+}
+
+section {
+  height: 70%;
+  width: 70%;
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  box-shadow: 2px 1px 3px 1px #ecebe7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

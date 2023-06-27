@@ -4,6 +4,8 @@
   "description": "<h3 align=\"center\">📘✨ **JavaScript Learning Repository (Based on David Flanagan's Book)** ✨📘</h3>",
   "main": "index.js",
   "scripts": {
+    "build:css": "postcss src_css/style.css -o build_css/style.css",
+    "build": "npm run build:css",
     "start": "run-script-os",
     "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
     "//": "Hello! If you are having trouble running this command. Try changing Firefox Developer Edition to FirefoxDeveloperEdition",
@@ -12,22 +14,37 @@
   "keywords": [],
   "author": "Francis Karuri",
   "license": "ISC",
+  "browserslist": [
+    "defaults and supports es6-module",
+    "maintained node versions"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+ },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "browser-sync": "^2.29.3",
     "cssnano": "^6.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.27.5",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "gulp-postcss": "^9.0.1",
+    "hint": "^7.1.9",
     "https-localhost": "^4.7.1",
     "postcss": "^8.4.24",
     "run-script-os": "^1.1.6",
-    "hint": "^7.1.9",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
   },
   "dependencies": {
-    "gulp-autoprefixer": "^8.0.0"
+    "autoprefixer": "^10.4.14",
+    "gulp-autoprefixer": "^8.0.0",
+    "postcss-cli": "^10.1.0"
   }
 }
