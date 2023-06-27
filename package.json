@@ -1,0 +1,33 @@
+{
+  "name": "jar-var-script",
+  "version": "1.0.0",
+  "description": "<h3 align=\"center\">📘✨ **JavaScript Learning Repository (Based on David Flanagan's Book)** ✨📘</h3>",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-script-os",
+    "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
+    "//": "Hello! If you are having trouble running this command. Try changing Firefox Developer Edition to FirefoxDeveloperEdition",
+    "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Firefox Developer Edition'"
+  },
+  "keywords": [],
+  "author": "Francis Karuri",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "cssnano": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-postcss": "^9.0.1",
+    "https-localhost": "^4.7.1",
+    "postcss": "^8.4.24",
+    "run-script-os": "^1.1.6",
+    "hint": "^7.1.9",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^8.0.0"
+  }
+}
