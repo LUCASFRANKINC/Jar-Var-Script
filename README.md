@@ -12,6 +12,10 @@
 
 Welcome to the JavaScript Learning Repository! 🎉 This repository is a comprehensive resource designed to facilitate your journey in mastering JavaScript, inspired by the acclaimed book "JavaScript: The Definitive Guide" by David Flanagan. 🚀
 
+Our Documentations to the tutorials are available ⬇️
+
+[![Here](https://media0.giphy.com/media/hHjOpLaawe5rvWvcTn/giphy.gif)](https://frank-dex-devs.github.io/)
+
 Whether you're a beginner looking to get started with JavaScript or an experienced developer seeking to deepen your understanding of the language, this repository aims to provide a structured and hands-on learning experience. 📚 David Flanagan's book serves as the primary reference for the content, ensuring a reliable and authoritative source of information. 🙌
 
 ## Key Features 🌟
