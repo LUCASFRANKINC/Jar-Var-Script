@@ -1,12 +1,21 @@
-// /* eslint-disable no-console */
+/* eslint-disable no-console */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-restricted-syntax */
+// no continue
+/* eslint-disable no-continue */
+// no hasOwnProperty
+/* eslint-disable no-prototype-builtins */
+// no guard-for-in
+/* eslint-disable guard-for-in */
 
-const data ={
-    firstName : "Lucas",
-    lastName : "Francis",
-}
+const data = {
+  firstName: 'Lucas',
+  lastName: 'Francis',
+};
 
-for(let d in data) {
-    console.log(`${d} => ${data[d]}`);
+for (const d in data) {
+  console.log(`${d} => ${data[d]}`);
 }
 
 let length = data.firstName?.length;
@@ -16,11 +25,11 @@ length = data.middleName?.length;
 console.log(length);
 
 // Enumerating props
-let x = {a : 5, d : 10, m : 12};
-for(let obj_items in x) {
-    if(!x.hasOwnProperty(obj_items)) continue; // skip any inherited property
+const x = { a: 5, d: 10, m: 12 };
+for (const objItems in x) {
+  if (!x.hasOwnProperty(objItems)) continue; // skip any inherited property
 }
 
-for(let obj_items in x) {
-    if(typeof obj_items === "function") continue; //skip all methods
+for (const objItems in x) {
+  if (typeof objItems === 'function') continue; // skip all methods
 }
