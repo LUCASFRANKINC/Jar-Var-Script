@@ -3,6 +3,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-restricted-syntax */
+/* eslint-disable no-underscore-dangle */
 
 const e = { x: 2, y: 3, z: 5 };
 const p = {
@@ -40,24 +41,24 @@ console.log(p.toString());
 
 // Usage of valueOf() function
 const q = {
-    x: 1,
-    y: 2,
-    valueOf() { return this.x + this.y; },
-}
+  x: 1,
+  y: 2,
+  valueOf() { return this.x + this.y; },
+};
 
 console.log(q + 1); // 4
 
 // Using symbols
-let symName = Symbol("my symbol");
+const symName = Symbol('my symbol');
 const objectHere = Object.create(Object.prototype);
-objectHere[symName] = "The data is fanatic!";
+objectHere[symName] = 'The data is fanatic!';
 
 console.log(objectHere[symName]);
 console.log(symName.description);
 
 // Getters and setters
-let myObj = {
-  _data : '',
+const myObj = {
+  _data: '',
   get data() {
     return this._data;
   },
@@ -66,8 +67,8 @@ let myObj = {
   },
   toString() {
     return `Hello, ${this.data}`;
-  }
-}
+  },
+};
 
-myObj.data = "Francis";
+myObj.data = 'Francis';
 console.log(myObj.toString());
