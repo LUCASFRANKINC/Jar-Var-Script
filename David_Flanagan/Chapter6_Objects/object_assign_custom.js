@@ -47,3 +47,27 @@ const q = {
 
 console.log(q + 1); // 4
 
+// Using symbols
+let symName = Symbol("my symbol");
+const objectHere = Object.create(Object.prototype);
+objectHere[symName] = "The data is fanatic!";
+
+console.log(objectHere[symName]);
+console.log(symName.description);
+
+// Getters and setters
+let myObj = {
+  _data : '',
+  get data() {
+    return this._data;
+  },
+  set data(newValue) {
+    this._data = newValue;
+  },
+  toString() {
+    return `Hello, ${this.data}`;
+  }
+}
+
+myObj.data = "Francis";
+console.log(myObj.toString());
