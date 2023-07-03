@@ -33,3 +33,21 @@ for (const objItems in x) {
 for (const objItems in x) {
   if (typeof objItems === 'function') continue; // skip all methods
 }
+
+const detailsUser = {
+  username : {firstName: "Francis", lastName: "Lucas"},
+  gender: 'x',
+  age: 28,
+  email: "lucas@mydomain.net",
+  address: {country: "Kenya", street: "Nairobi", postOfficeBox: 10109},
+  toString() {
+    let genderLowerCase = this.gender.toLowerCase();
+    return `Name: ${this.username.firstName} ${this.username.lastName}\nGender: ${genderLowerCase === 'm' ? "Male" : genderLowerCase === 'f' ? "Female" : "Unspecified gender!"}\n` +
+        `Age: ${this.age}\nEmail Address: ${this.email}\nAddress: ${this.address.postOfficeBox}-${this.address.street},${this.address.country}.`;
+  },
+  valueOf() {
+    return this.age;
+  }
+}
+
+console.log(detailsUser.toString(), Number(detailsUser));
