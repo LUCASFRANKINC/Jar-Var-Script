@@ -61,6 +61,10 @@ console.log( dv2.getInt8(0))
 console.log( dv2.getInt8(2))
 //retrieve the 42 from the 2nd byte in view2 which was 
 //the 11th byte in the buffer
-console.log(dv2);
+dv1.setUint16(0, 45628)
+console.log(dv1.getUint16(0));
+console.log(dv1);
 
-
+dv1.setFloat64(2, 5484465654.554848454646464);
+console.log(dv1.getFloat64(2));
+console.log(dv1)
