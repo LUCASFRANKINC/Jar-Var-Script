@@ -1,10 +1,15 @@
-let string = 'Francis';
-let array = [1, 2, 3, 4, 5];
-let set = new Set([7, 8, 9, 7, 4, 9, 5]);
-let map = new Map([["frank", 28], ["fenzia", 25]]);
+let iterable_string = 'Francis';
+let iterable_array = [1, 2, 3, 4, 5];
+let iterable_set = new Set([7, 8, 9, 7, 4, 9, 5]);
+let iterable_map = new Map([["frank", 28], ["fenzia", 25]]);
 
-//Utilizing set for the iterator
-let iterator = set[Symbol.iterator]();
-for(let result = iterator.next(); !result.done; result=iterator.next() ) {
-  console.log(result.value);
+
+let iterator_object = iterable_map[Symbol.iterator](); //Creates an iterator iterator_object
+/**
+console.log(iterator_object.next();
+console.log(iterator_object.next());
+console.log(iterator_object.next());
+*/
+for(let result =iterator_object.next(); !result.done; result = iterator_object.next()) {
+  console.log(`Value: ${result.value}, Are we done? : ${result.done ? "Yes" : "No"}`)
 }
