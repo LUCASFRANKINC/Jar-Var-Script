@@ -20,7 +20,7 @@ console.table({
   })(matched),
   "Groups": (function(x) {
     let arr = [];
-    for(let key in x.groups) arr.push({[key] : x.groups[key]});
+    for(let key in x.groups) arr.push({key : x.groups[key]});
     return arr;
   })(matched)
 })
