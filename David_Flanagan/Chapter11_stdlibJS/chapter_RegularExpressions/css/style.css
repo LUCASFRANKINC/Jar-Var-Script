@@ -1,0 +1,13 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: calc(100vh - 20px);
+  grid-template-rows: 1fr;
+  align-content: center;
+  justify-content: center;
+}
+
+body >* {
+  align-self: center;
+  justify-self: center;
+}
