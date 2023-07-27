@@ -56,3 +56,27 @@ function filter(iterable_obj, predicate) {
 }
 
 console.log([...filter(new Range(5,10), x => x % 2 === 0)]);
+
+//What of em objects
+const obj = {"Frank": 28, "Winfred": 22, "relationship": "partners"};
+let iteratorObj = Object.keys(obj)[Symbol.iterator]();
+for(let i of iteratorObj) {
+  console.log(`${i} => ${obj[i]}`)
+}
+
+obj[Symbol.iterator] = function()  {
+  let iterator = Object.keys(this); //Returns an array
+  let next = 0;
+  const SELF = this;
+  return {
+    [Symbol.iterator]() {return this;},
+    next() {
+      return next < iterator.length ? {value: `${iterator[next]} => ${SELF[iterator[next++]]}`, done: false} : {done: true};
+    }
+  }
+}
+
+console.log("Trial 2!");
+for(let i of obj) {
+  console.log(i);
+}
