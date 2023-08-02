@@ -22,6 +22,12 @@ body {
   color: var(--text-color);
   text-align: center;
   background-color: #eceff4;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 20px);
+  grid-template-rows: minmax(400px, 1fr);
+  align-items: center;
 }
 
 #wrapper > * {
