@@ -39,7 +39,12 @@ function createButton(text, onClickHandler) {
 
 const handleBtnClick = (e) => {
   const btn = e.target;
-  console.log(btn.textContent);
+  //on click, place the text content into the readonly input
+  let recorder = document.querySelector('#flags-recorder');
+  //get the values and check for duplicates
+  let recorderValues = [...recorder.value];
+  let inp = btn.textContent;
+  recorder.value += recorderValues.indexOf(inp) === -1 ? inp : "";
 };
 
 const btnContainer = document.getElementById("flags-container");
@@ -47,3 +52,5 @@ for (let i of buttonsFlags) {
   const button = createButton(i, handleBtnClick);
   btnContainer.appendChild(button);
 }
+
+

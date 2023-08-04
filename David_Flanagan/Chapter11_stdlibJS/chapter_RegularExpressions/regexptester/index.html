@@ -19,19 +19,23 @@
         autofocus
         required
       ></textarea>
-      <label for="regexp"></label>
-      <textarea
-        id="regexp"
-        name="regexp"
-        rows="2"
-        cols="30"
-        placeholder="Input the regular expression here!"
-        required
-      ></textarea>
-      <div id="flags-container"></div>
+      <div id="flex-inp">
+        <label for="regexp"></label>
+        <input type="text" value="/" readonly />
+        <textarea
+                id="regexp"
+                name="regexp"
+                rows="2"
+                cols="30"
+                placeholder="Input the regular expression here!"
+                required
+        ></textarea>
+        <input id="flags-recorder" type="text" value="/" readonly />
+      </div>
+     <div id="flags-container"></div>
       <button class="btn-12 custom-btn" type="button" id="test">
-        <span>Test</span>
-        <span>Lets Go!</span>
+        <span>Ready ✔</span>
+        <span>Lets Go! 👉</span>
       </button>
     </div>
     <script src="index.js"></script>
