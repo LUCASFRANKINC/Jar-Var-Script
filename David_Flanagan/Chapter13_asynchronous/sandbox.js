@@ -1,26 +1,28 @@
-const getTodos = (resource, callback) => {
-    const request = new XMLHttpRequest();
-    request.addEventListener('readystatechange',() => {
-        if(request.readyState === 4 && request.status === 200) {
-            const data = JSON.parse(request.responseText);
-            callback(undefined, data);
-        } else if (request.readyState === 4) {
-            callback('Could not fetch data', undefined);
-        }
-    } )
-    request.open("GET", resource);
-    request.send();
+const getTodos = (resource) => {
+    return new Promise((resolve, reject) => {
+        const request = new XMLHttpRequest();
+        request.addEventListener('readystatechange',() => {
+            if(request.readyState === 4 && request.status === 200) {
+                const data = JSON.parse(request.responseText);
+                resolve(data);
+            } else if (request.readyState === 4) {
+                reject('Could not fetch data');
+            }
+        } )
+        request.open("GET", resource);
+        request.send();
+    })
 }
 
-getTodos("example_1.json",(err, data) => {
-    console.log('Callback fired.');
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(data);
-        getTodos("example_2.json", (err, data) => {
-            console.log(data);
-
-        })
-    }
+//promises
+getTodos("./example_2.json").then(data => {
+    console.log('Promise 1 resolved', data)
+    return getTodos("./example_11.json")
+}).then(data => {
+    console.log("Promise 2 resolved.", data)
+    return getTodos("./todos.json")
+}).then(data => {
+    console.log("Promise 3 resolved.", data)
+}).catch(err => {
+    console.log("Promise rejected")
 });
