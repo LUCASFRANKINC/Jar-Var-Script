@@ -2,8 +2,8 @@
 const fetchData = async () => {
     const response = await fetch("./league-tables.json");
     if (!response.ok)
-        throw new Error("Cannot get the file required.")
-    return await response.json()
+        throw new Error("Cannot get the file required.");
+    return await response.json();
 }
 
 const iterateData = async (iterable) => {
@@ -20,7 +20,7 @@ const iterateData = async (iterable) => {
                 next() {
                     return next < iterator.length ? {value: `${iterator[next++]}` , done: false} : {done: true};
                 }
-            }
+            };
         }
          resolve([...iterable]);
     })
