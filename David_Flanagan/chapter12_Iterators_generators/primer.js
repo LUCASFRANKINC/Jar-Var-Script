@@ -12,7 +12,7 @@ class Primer {
 
 	primeRecursively(y, i = 2) {
 		if (y === 1) return false;
-		return y > i ? (y % i++ ? true : false) && (y > i ? this.primeRecursively(y, i) : true) : true;
+		return y > i ? (!!(y % i++)) && (y > i ? this.primeRecursively(y, i) : true) : true;
 	}
 
 	primeNormal(x) {
