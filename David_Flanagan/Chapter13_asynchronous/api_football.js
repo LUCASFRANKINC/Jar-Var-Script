@@ -18,13 +18,35 @@ const iterateData = async (iterable) => {
             return {
                 [Symbol.iterator]() {return SELF},
                 next() {
-                    return next < iterator.length ? {value: `${iterator[next++]}` , done: false} : {done: true};
+                    return next < iterator.length ? {value: `${simulateObj([...SELF[iterator[next++]]]).then(data => {console.table(data)})}` , done: false} : {done: true};
                 }
             };
         }
          resolve([...iterable]);
     })
 }
+
+const iterateObj = async (obj) => {
+    return new Promise((resolve, reject) => {
+        function Data(name, country, points, position) {
+            this.name = name;
+            this.country = country;
+            this.points = points;
+            this.position = position;
+        }
+
+        if (typeof obj === "undefined") reject("Could we really do that on an empty object?");
+        let str = [];
+        for (let i = 0; i < obj.length; i++) {
+            const {name, country, points, position} = obj[i];
+            const dt = new Data(name, country, points, position);
+            str.push(dt);
+        }
+        resolve(str);
+    })
+}
+
+const simulateObj = async (obj) => await iterateObj(obj);
 
 const printData = async (data) => {
     return await iterateData(data);
@@ -35,6 +57,5 @@ fetchData()
         return printData(data["data"]);
     }).then(data => {
     console.info("2. Successful: ");
-    console.table(data);
 })
     .catch(err => console.log("Rejected:", err));
