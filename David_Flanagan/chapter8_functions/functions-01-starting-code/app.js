@@ -26,10 +26,9 @@ const getComputerChoice = () => {
     return randomVal < 34 ? ROCK : randomVal >= 34 && randomVal < 67 ? PAPER : SCISSORS;
 }
 
-const determineWinner = (cChoice, pChoice) => {
-    return cChoice === pChoice ? RESULT_DRAW : cChoice === ROCK && pChoice === PAPER || cChoice === PAPER && pChoice === SCISSORS ||
+const determineWinner = (cChoice, pChoice) =>
+    cChoice === pChoice ? RESULT_DRAW : cChoice === ROCK && pChoice === PAPER || cChoice === PAPER && pChoice === SCISSORS ||
         cChoice === SCISSORS && pChoice === ROCK ? RESULT_PWIN : RESULT_CWIN;
-}
 
 startGameBtn.addEventListener('click', () => {
     if(gameIsRunning) return;
